@@ -27,7 +27,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${approved}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0bngexj" sourceRef="UserTask_1wf84hk" targetRef="Task_07o57ts" />
-    <bpmn:startEvent id="StartEvent_0ndhzyo" name="Anfrage eingegangen" camunda:formKey="embedded:app:forms/startform.html">
+    <bpmn:startEvent id="StartEvent_0ndhzyo" name="Anfrage eingegangen" camunda:formKey="embedded:app:webapp/forms/startform.html">
       <bpmn:outgoing>SequenceFlow_087euw1</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0u7em8s" sourceRef="Task_1tdsbg7" targetRef="Task_1ectg49" />
@@ -35,7 +35,7 @@
       <bpmn:incoming>SequenceFlow_087euw1</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0u7em8s</bpmn:outgoing>
     </bpmn:businessRuleTask>
-    <bpmn:userTask id="Task_1ectg49" name="Thementauglichkeit prüfen" camunda:formKey="embedded:app:forms/thementauglichkeit.html" camunda:assignee="denis">
+    <bpmn:userTask id="Task_1ectg49" name="Thementauglichkeit prüfen" camunda:formKey="embedded:app:webapp/forms/thementauglichkeit.html" camunda:assignee="denis">
       <bpmn:incoming>SequenceFlow_0u7em8s</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1416nfe</bpmn:outgoing>
     </bpmn:userTask>
@@ -46,7 +46,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="SequenceFlow_14ekmnk" sourceRef="Task_07o57ts" targetRef="EndEvent_0vedb31" />
     <bpmn:sequenceFlow id="SequenceFlow_0fgt880" sourceRef="Task_0m12fj4" targetRef="EndEvent_1apvexx" />
-    <bpmn:userTask id="Task_0m12fj4" name="Ablehnungsmail schreiben" camunda:formKey="embedded:app:forms/ablehnungmail.html" camunda:assignee="denis">
+    <bpmn:userTask id="Task_0m12fj4" name="Ablehnungsmail schreiben" camunda:formKey="embedded:app:webapp/forms/ablehnungmail.html" camunda:assignee="denis">
       <bpmn:incoming>SequenceFlow_04ijjem</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0fgt880</bpmn:outgoing>
     </bpmn:userTask>
@@ -58,7 +58,7 @@
       <bpmn:incoming>SequenceFlow_14ekmnk</bpmn:incoming>
       <bpmn:messageEventDefinition messageRef="Message_1mf079z" camunda:class="scis.liefart.exportmsg" />
     </bpmn:endEvent>
-    <bpmn:userTask id="Task_07o57ts" name="Bestätigungsschreiben erstellen" camunda:formKey="embedded:app:forms/email.html" camunda:assignee="denis">
+    <bpmn:userTask id="Task_07o57ts" name="Bestätigungsschreiben erstellen" camunda:formKey="embedded:app:webapp/forms/email.html" camunda:assignee="denis">
       <bpmn:incoming>SequenceFlow_0bngexj</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_14ekmnk</bpmn:outgoing>
     </bpmn:userTask>
