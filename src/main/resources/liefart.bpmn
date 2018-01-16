@@ -27,7 +27,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${approved}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_0bngexj" sourceRef="UserTask_1wf84hk" targetRef="Task_07o57ts" />
-    <bpmn:startEvent id="StartEvent_0ndhzyo" name="Anfrage eingegangen" camunda:formKey="embedded:app:src/main/webapp/forms/startform.html">
+    <bpmn:startEvent id="StartEvent_0ndhzyo" name="Anfrage eingegangen" camunda:formKey="embedded:app:webapp/forms/startform.html">
       <bpmn:outgoing>SequenceFlow_087euw1</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0u7em8s" sourceRef="Task_1tdsbg7" targetRef="Task_1ectg49" />
